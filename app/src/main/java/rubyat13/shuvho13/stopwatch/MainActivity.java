@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+    //Design and Development By Al Rubyat
+
 import static android.graphics.Typeface.*;
 
 public class MainActivity extends AppCompatActivity {
