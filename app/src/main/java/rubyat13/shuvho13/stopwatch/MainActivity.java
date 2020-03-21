@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
     //Design and Development By Al Rubyat
@@ -15,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvSplash, tvSubSplash;
     Button bSplash;
+    Animation atg;
+    ImageView ivSplash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,12 @@ public class MainActivity extends AppCompatActivity {
         tvSplash = findViewById(R.id.tvSplash);
         tvSubSplash = findViewById(R.id.tvSubSplash);
         bSplash = findViewById(R.id.bSplash);
+        ivSplash = findViewById(R.id.ivSplash);
+
+        atg = AnimationUtils.loadAnimation(this, R.anim.atg);
+
+        //Passing Animation
+        ivSplash.startAnimation(atg);
 
         //Import font
         Typeface MLight = Typeface.createFromAsset(getAssets(),  "fonts/MLight.ttf");
