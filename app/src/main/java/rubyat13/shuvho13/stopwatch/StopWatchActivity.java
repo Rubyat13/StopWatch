@@ -2,6 +2,7 @@ package rubyat13.shuvho13.stopwatch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +13,7 @@ import android.widget.ImageView;
 
 public class StopWatchActivity extends AppCompatActivity {
 
-    Button bStart;
+    Button bStart, bStop;
     ImageView icanchor;
     Animation roundingicon;
 
@@ -22,7 +23,13 @@ public class StopWatchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stop_watch);
 
         bStart =findViewById(R.id.bStart);
+        bStop =findViewById(R.id.bStop);
         icanchor =findViewById(R.id.icanchor);
+
+
+        //creaete optional animation
+        bStop.setAlpha(0);
+
 
         //load animation
         roundingicon = AnimationUtils.loadAnimation(this,R.anim.roundingicon);
@@ -39,6 +46,7 @@ public class StopWatchActivity extends AppCompatActivity {
 
                 //passing Animation
                 icanchor.startAnimation(roundingicon);
+                bStop.animate().alpha(1).setDuration(300).start();
 
             }
         });
