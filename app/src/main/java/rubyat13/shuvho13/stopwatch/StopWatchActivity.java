@@ -55,8 +55,9 @@ public class StopWatchActivity extends AppCompatActivity {
                 bStop.animate().alpha(1).translationY(-80).setDuration(300).start();
                 bStart.animate().alpha(0).setDuration(300).start();
 
-
-
+                //Start time
+                timerHere.setBase(SystemClock.elapsedRealtime());
+                timerHere.start();
 
             }
         });
