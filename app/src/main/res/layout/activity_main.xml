@@ -4,34 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#211D44"
+    android:background="@drawable/workout2"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/ivSplash"
-        android:layout_width="380dp"
-        android:layout_height="390dp"
-        android:src="@drawable/icget"
+        android:layout_width="169dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="90dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/logo1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-         />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvSplash"
-        android:text="Running StopWatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="5dp"
-        android:textColor="#fff"
-        android:textSize="25sp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="8dp"
+        android:text="Running StopWatch"
         android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivSplash"/>
+        app:layout_constraintTop_toBottomOf="@+id/ivSplash" />
 
     <TextView
         android:id="@+id/tvSubSplash"
@@ -42,7 +43,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="3dp"
         android:textColor="#fff"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,34 +53,33 @@
         android:id="@+id/bSplash"
         android:layout_width="288dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="115dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/bgbutton"
         android:text="Get Started"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20sp"
-        android:background="@drawable/bgbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tDeveloper"
-        android:text="Design and Developed By"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:text="Design and Developed By"
         android:textColor="#fff"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bSplash"/>
+        app:layout_constraintTop_toBottomOf="@+id/bSplash" />
 
     <TextView
         android:id="@+id/tDeveloperName"
@@ -87,6 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginTop="1dp"
         android:text="Al Rubyat"
         android:textColor="#fff"
         android:textSize="12sp"

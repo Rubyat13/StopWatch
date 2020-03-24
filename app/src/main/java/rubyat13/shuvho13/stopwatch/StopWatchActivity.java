@@ -13,6 +13,13 @@ import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageView;
 
+
+
+
+/*
+Copyright (c) 2020, Al Rubyat
+*/
+
 public class StopWatchActivity extends AppCompatActivity {
 
     Button bStart, bStop;
@@ -29,6 +36,7 @@ public class StopWatchActivity extends AppCompatActivity {
         bStop =findViewById(R.id.bStop);
         icanchor =findViewById(R.id.icanchor);
         timerHere =findViewById(R.id.timerHere);
+
 
 
 
@@ -59,6 +67,22 @@ public class StopWatchActivity extends AppCompatActivity {
                 timerHere.setBase(SystemClock.elapsedRealtime());
                 timerHere.start();
 
+                bStart.setVisibility(View.INVISIBLE);
+                bStop.setVisibility(View.VISIBLE);
+
+
+
+            }
+        });
+
+        bStop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                timerHere.stop();
+                timerHere.setBase(SystemClock.elapsedRealtime());
+
+                bStart.setVisibility(View.VISIBLE);
+                bStop.setVisibility(View.INVISIBLE);
             }
         });
     }
