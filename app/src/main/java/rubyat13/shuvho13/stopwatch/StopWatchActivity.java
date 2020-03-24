@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.ImageView;
 
 public class StopWatchActivity extends AppCompatActivity {
@@ -16,6 +18,7 @@ public class StopWatchActivity extends AppCompatActivity {
     Button bStart, bStop;
     ImageView icanchor;
     Animation roundingicon;
+    Chronometer timerHere;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,8 @@ public class StopWatchActivity extends AppCompatActivity {
         bStart =findViewById(R.id.bStart);
         bStop =findViewById(R.id.bStop);
         icanchor =findViewById(R.id.icanchor);
+        timerHere =findViewById(R.id.timerHere);
+
 
 
         //creaete optional animation
@@ -49,6 +54,9 @@ public class StopWatchActivity extends AppCompatActivity {
                 icanchor.startAnimation(roundingicon);
                 bStop.animate().alpha(1).translationY(-80).setDuration(300).start();
                 bStart.animate().alpha(0).setDuration(300).start();
+
+
+
 
             }
         });
