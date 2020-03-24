@@ -39,6 +39,7 @@ public class StopWatchActivity extends AppCompatActivity {
 
         //Customize font
         bStart.setTypeface(MMedium);
+        bStop.setTypeface(MMedium);
 
         bStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,7 +47,8 @@ public class StopWatchActivity extends AppCompatActivity {
 
                 //passing Animation
                 icanchor.startAnimation(roundingicon);
-                bStop.animate().alpha(1).setDuration(300).start();
+                bStop.animate().alpha(1).translationY(-80).setDuration(300).start();
+                bStart.animate().alpha(0).setDuration(300).start();
 
             }
         });
