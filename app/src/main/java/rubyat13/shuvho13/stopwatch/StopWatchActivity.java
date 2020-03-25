@@ -17,7 +17,7 @@ import android.widget.ImageView;
 
 
 /*
-Copyright (c) 2020, Al Rubyat
+Copyright (c) 2020, Al Rubyat Shuvho
 */
 
 public class StopWatchActivity extends AppCompatActivity {
