@@ -12,6 +12,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import java.util.logging.Logger;
 
 
 
@@ -67,8 +70,9 @@ public class StopWatchActivity extends AppCompatActivity {
                 timerHere.setBase(SystemClock.elapsedRealtime());
                 timerHere.start();
 
-                bStart.setVisibility(View.INVISIBLE);
+
                 bStop.setVisibility(View.VISIBLE);
+                bStart.setVisibility(View.INVISIBLE);
 
 
 
@@ -80,9 +84,14 @@ public class StopWatchActivity extends AppCompatActivity {
             public void onClick(View v) {
                 timerHere.stop();
                 timerHere.setBase(SystemClock.elapsedRealtime());
+                icanchor.startAnimation(roundingicon);
+                bStart.animate().alpha(1).setDuration(300).start();
+                bStop.animate().alpha(0).setDuration(300).start();
+
 
                 bStart.setVisibility(View.VISIBLE);
                 bStop.setVisibility(View.INVISIBLE);
+
             }
         });
     }
